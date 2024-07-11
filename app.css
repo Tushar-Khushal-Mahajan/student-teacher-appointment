@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    position: fixed;
+    display: flex;
+    font-weight: 40px;
+    z-index: 999;
+    width: 100%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+
+}
+
+.nav-bar .left-nav-item {
+    gap: 40px;
+    width: 100%;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    list-style: none;
+    border-bottom: 1px solid #dadada;
+    font-size: 20px;
+    color: black;
+
+    /* background: rgba(0, 0, 0, 0.345); */
+    background: rgba(255, 255, 255, 0.554);
+    backdrop-filter: blur(30px);
+}
+
+
+.left-nav-item li:first-child {
+    margin-right: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-nav-item li img {
+    height: 90%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+
+.nav-bar .left-nav-item li {
+    cursor: pointer;
+}
+
+
+.nav-bar .left-nav-item li:nth-child(n + 2):hover {
+    padding: 5px;
+    color: white;
+    background-color: blue;
+    border-radius: 10%;
+}
+
+
+.left-nav-item li:last-child {
+    display: none;
+}
+
+
+
+/* horizontal nav style */
+.horizontan-nav {
+    padding-top: 12px;
+    z-index: 999;
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    width: 50%;
+    display: none;
+    list-style: none;
+    align-items: start;
+    flex-direction: column;
+    border: 1px solid black;
+    background: transparent;
+    backdrop-filter: blur(10px);
+
+    overflow: hidden;
+}
+
+
+.horizontan-nav li {
+    padding: 5px;
+    width: 80%;
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.horizontan-nav li:first-child {
+    width: fit-content;
+
+}
+
+
+.horizontan-nav li::before {
+    content: "";
+    bottom: 0;
+    position: absolute;
+    width: 80%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.135);
+}
+
+.horizontan-nav li:hover {
+    background-color: rgb(0, 4, 255);
+    color: white;
+}
+
+/* Close horizontal nav style */
+
+/* =============================================================== */
+
+.Home-content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.Home-content .left-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home-content .left-content .buttons {
+    margin-top: 10px;
+}
+
+.Home-content .left-content .buttons button {
+    padding: 10px;
+    margin: 10px;
+    background: rgba(0, 0, 0, 0.039);
+    font-size: 20px;
+    border: none;
+    gap: 50px;
+    backdrop-filter: blur(50px);
+    box-shadow: 0px 0px 5px darkblue, 3px 3px 10px lightblue;
+}
+
+.Home-content .left-content .buttons button:hover {
+    box-shadow: 2px 2px 6px purple;
+}
+
+.Home-content .right-content {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home-content .right-content img {
+    width: 50%;
+    border-radius: 50%;
+    border: 5px solid blue;
+}
+
+
+/* =================================================================== */
+
+@media screen and (max-width: 993px) {
+    .horizontan-nav {
+        display: none;
+    }
+
+    .left-nav-item li:last-child {
+        display: block;
+    }
+
+    .nav-bar .left-nav-item .hideWhenSmall {
+        display: none;
+    }
+
+    /* home styling */
+
+    .Home-content {
+        padding-top: 150px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Home-content .left-content {
+        width: 100%;
+
+    }
+
+    .Home-content .left-content h3 {
+        font-size: 3vw;
+    }
+
+    .Home-content .left-content .buttons button {
+        font-size: 2vw;
+    }
+
+    .Home-content .right-content {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-self: center;
+
+    }
+
+    /* end home style */
+}
+
+/* for small screen size */
+@media screen and (max-width: 550px) {
+    .horizontan-nav {
+        width: 100%;
+    }
+
+
+    .left-nav-item li:last-child {
+        display: block;
+    }
+
+    .nav-bar .left-nav-item .hideWhenSmall {
+        display: none;
+    }
+
+    /* home style */
+    .Home-content .left-content h3 {
+        font-size: 4vw;
+    }
+
+    .Home-content .left-content .buttons button {
+        font-size: 3vw;
+    }
+
+}
