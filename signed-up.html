@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration or Sign Up form in HTML CSS | CodingLab </title>
+    <link rel="stylesheet" href="signed-up.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Registration</h2>
+        <form id="signedUpForm">
+            <div class="input-box">
+                <input type="text" placeholder="Enter User Name" name="username" required>
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="Enter your email" name="email" required>
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Enter Contact No" name="contactNo" required>
+            </div>
+            <div class="input-box">
+                <select name="deptSelect">
+                    <option value="0" selected>Select Department</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Create password" name="password" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Confirm password" name="c-pass" required>
+            </div>
+            <div class="input-box">
+                <input type="file" name="file" required>
+            </div>
+            <div class="policy">
+                <input type="checkbox" name="checkbox" value="check">
+                <h3>I accept all terms & condition</h3>
+            </div>
+            <div class="input-box button">
+                <input type="Submit" value="Register Now">
+            </div>
+            <div class="text">
+                <h3>Already have an account? <a href="signed-in.html">Signed-In now</a></h3>
+            </div>
+        </form>
+    </div>
+</body>
+
+
+<script type="module" src="./scripts/signed-up.js"></script>
+
+</html>

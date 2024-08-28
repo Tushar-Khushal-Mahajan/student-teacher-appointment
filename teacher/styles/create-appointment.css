@@ -1,0 +1,62 @@
+.main-container {
+    position: relative;
+    top: 60px;
+    left: 50px;
+
+    width: calc(100% - 50px);
+    height: fit-content;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.form-container {
+    margin-top: 80px;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+}
+
+.input-group .input1,
+.input2,
+.input3 {
+    flex: 1;
+
+}
+
+.input-group input {
+    padding: 10px;
+    width: 100%;
+}
+
+.btnGroup button {
+    width: 150px;
+}
+
+.tbl-container {
+    overflow-x: scroll;
+    margin-bottom: 50px;
+}
+
+table .title-col {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width:580px) {
+    .main-container {
+        left: 0px;
+        margin: 0px;
+        width: 100%;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .btnGroup button {
+        width: 100px;
+    }
+}

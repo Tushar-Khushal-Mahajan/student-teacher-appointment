@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="../styles/see-all-appointments.css">
+    <link rel="stylesheet" href="../../static-resources/commons/nav-nd-sidebar.css">
+    <title>See all Appointments</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="nav-bar">
+        <ul class="left-nav-item container">
+            <li>
+                <!-- <img src="" onerror="this.onerror=null; this.src='https://bootdey.com/img/Content/avatar/avatar7.png'"> -->
+            </li>
+
+            <li class="menu-Icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#000000">
+                    <path d="M95-203v-95h771v95H95Zm0-230v-94h771v94H95Zm0-229v-95h771v95H95Z" />
+                </svg>
+            </li>
+            <li class="close-Icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#000000">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+            </li>
+        </ul>
+    </nav>
+    <!-- end nav -->
+
+    <!-- sidebar -->
+    <section class="sidebar">
+        <ul>
+            <li></li>
+            <li class="user-Info">
+                <a href="../teacher-dashboard.html">
+                    <img src="" onerror="this.onerror=null; this.src='https://bootdey.com/img/Content/avatar/avatar7.png'">
+                </a>
+            </li>
+            <li>
+                <a href="create-appointment.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#000000">
+                        <path
+                            d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z" />
+                    </svg>
+                </a>
+            </li>
+            <li class="active">
+                <a href="see-all-appointments.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#000000">
+                        <path
+                            d="M400-400h160v-80H400v80Zm0-120h320v-80H400v80Zm0-120h320v-80H400v80Zm-80 400q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" />
+                    </svg>
+                </a>
+            </li>
+            <li class="log-out">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#00000">
+                        <path
+                            d="M791-55 686-160H160v-112q0-34 17.5-62.5T224-378q45-23 91.5-37t94.5-21L55-791l57-57 736 736-57 57ZM240-240h366L486-360h-6q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm496-138q29 14 46 42.5t18 61.5L666-408q18 7 35.5 14t34.5 16ZM568-506l-59-59q23-9 37-29.5t14-45.5q0-33-23.5-56.5T480-720q-25 0-45.5 14T405-669l-59-59q23-34 58-53t76-19q66 0 113 47t47 113q0 41-19 76t-53 58Zm38 266H240h366ZM457-617Z" />
+                    </svg>
+                </a>
+            </li>
+
+        </ul>
+    </section>
+    <!-- end sidebar -->
+
+    <main class="main-section ">
+        <h3 class="text-center">ALL Appointments</h3>
+        <section class="text-end">
+            <Label for="search-appointment">Search Appointment</Label>
+            <input type="text" id="search-appointment">
+        </section>
+
+        <!--  -->
+
+        <section class="mt-5 tbl-section">
+            <table class="table text-center apt-table">
+                <thead>
+                    <tr>
+                        <th>Stud. Id</th>
+                        <th>Appt. Id</th>
+                        <th>Student Name</th>
+                        <th>Date</th>
+                        <th colspan="2">TIME</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+                <tbody id="tblBody">
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!--  -->
+
+    <script type="module" src="../../public/modules/sidebar-toggle-module.js"></script>
+    <script>
+
+        // data
+
+        let data = [
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: "Approved By Admin"
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: ""
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: "Cancled By Admin"
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: ""
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: ""
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: ""
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: ""
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: ""
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: ""
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: "Approved By Admin"
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: ""
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: "Cancled By Student"
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: ""
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: ""
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: ""
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: ""
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: ""
+            },
+            {
+                studId: 101,
+                aptId: 1,
+                studName: "tushar",
+                date: "11/07/20024",
+                form: "from : 1pm",
+                to: "to : 3pm",
+                action: ""
+            },
+        ];
+
+        for (const iterator of data) {
+
+            let actionColumn = iterator.action;
+            if (iterator.action.trim() == "") {
+                actionColumn = `
+                <button aptId="${iterator.aptId}">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#008000">
+                                <path
+                                    d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z" />
+                            </svg>
+                        </button>
+                        <button aptId="${iterator.aptId}">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#0000ff">
+                                <path
+                                    d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q65 0 123 19t107 53l-58 59q-38-24-81-37.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q32 0 62-6t58-17l60 61q-41 20-86 31t-94 11Zm280-80v-120H640v-80h120v-120h80v120h120v80H840v120h-80ZM424-296 254-466l56-56 114 114 400-401 56 56-456 457Z" />
+                            </svg>
+                        </button>
+                        <button aptId="${iterator.aptId}">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#ff0000">
+                                <path
+                                    d="m336-280 144-144 144 144 56-56-144-144 144-144-56-56-144 144-144-144-56 56 144 144-144 144 56 56ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                            </svg>
+                        </button>
+                `;
+            }
+
+            document.querySelector("#tblBody").innerHTML += `
+            <tr>
+                    <td>${iterator.studId}</td>
+                    <td>${iterator.aptId}</td>
+                    <td>${iterator.studName}</td>
+                    <td>${iterator.date}</td>
+                    <td>${iterator.form}</td>
+                    <td>${iterator.to}</td>
+                    <td class="tbl-action-btns"> 
+                        ${actionColumn}
+                    </td>
+                </tr>
+            `;
+        }
+
+    </script>
+</body>
+
+</html>

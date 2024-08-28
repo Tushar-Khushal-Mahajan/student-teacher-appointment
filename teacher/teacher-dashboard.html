@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <link rel="stylesheet" href="teacher-dashboard.css">
-    <link rel="stylesheet" href="../../static-resources/commons/nav-nd-sidebar.css">
+    <link rel="stylesheet" href="../static-resources/commons/nav-nd-sidebar.css">
     <title>Teacher Dashboard</title>
 </head>
 
@@ -20,7 +20,7 @@
     <nav class="nav-bar">
         <ul class="left-nav-item container">
             <li>
-                <img class="logo" src="../static-resources/images/logo.jpg" alt="helo">
+                <!-- <img class="logo" src="../static-resources/images/logo.jpg" alt="helo"> -->
             </li>
 
             <li class="menu-Icon">
@@ -36,11 +36,6 @@
                         d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                 </svg>
             </li>
-
-            <!-- <li class="user-icon">
-                <img src="../static-resources/images/logo.jpg" alt="helo">
-                <span>Tushar Mahajan</span>
-            </li> -->
         </ul>
     </nav>
     <!-- end nav -->
@@ -52,11 +47,11 @@
             <li></li>
             <li class="user-Info active">
                 <a href="teacher-dashboard.html">
-                    <img src="../static-resources/images/20240625_115017-01.jpeg" alt="">
+                    <img src="" onerror="this.onerror=null; this.src='https://bootdey.com/img/Content/avatar/avatar7.png'">
                 </a>
             </li>
             <li>
-                <a href="./pages/create-appointment.html">
+                <a href="./layouts/create-appointment.html">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#000000">
                         <path
@@ -65,7 +60,7 @@
                 </a>
             </li>
             <li>
-                <a href="./pages/see-all-appointments.html">
+                <a href="./layouts/see-all-appointments.html">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                         fill="#000000">
                         <path
@@ -88,318 +83,126 @@
     <!-- end sidebar -->
 
     <!-- user dashboard -->
-    <div class="teacher-dashboard">
-        <main class="top-main-container">
-            <section class="admin-details-section">
+    <div class="admin-dashboard">
 
-                <div class="top-section">
-                    <img src="../static-resources/images/20240625_115017-01.jpeg" alt="">
-                    <input type="text" value="Tushar" readonly>
-                    <label>TEACHER</label>
+        <main class="top-main-container ">
+            <div class="container">
+                <div class="main-body">
+
+                    <div class="row gutters-sm">
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex flex-column align-items-center text-center">
+                                        <img src="" onerror="this.onerror=null; this.src='https://bootdey.com/img/Content/avatar/avatar7.png'" alt="Admin"
+                                            class="rounded-circle" width="150">
+                                        <div class="mt-3">
+                                            <h4 class="NAME"></h4>
+                                            <p class="text-muted font-size-sm UID"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Full Name</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary NAME">
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Email</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary EMAIL">
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Mobile</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary MOBILE">
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <a class="btn btn-info " target="__blank"
+                                                href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row gutters-sm table-section">
+                            <div class="col-sm-12 mb-3">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <table class="table text-center">
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="5">Appointment Table</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Appointment Id</th>
+                                                    <th>Appointment Title</th>
+                                                    <th>Date</th>
+                                                    <th colspan="2">Appointment Time</th>
+                                                    <!-- <th>Action</th> -->
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <th>From</th>
+                                                    <th>To</th>
+                                                    <td></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="TBL_BODY">
+                                                <!-- autofill with js -->
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div>
-                    <label for="name">Full Name : </label>
-                    <input type="text" id="name" value="Tushar Khushal Mahajan" readonly>
-                </div>
-
-                <div>
-                    <label for="email">Contact No : </label>
-                    <input type="number" id="number" value="8637729558" readonly>
-                </div>
-
-                <div>
-                    <label for="email">Email : </label>
-                    <input type="email" id="email" value="mahajantushar208@gmail.com" readonly>
-                </div>
-
-                <div class="buttons-group">
-                    <button class="edit-btn">EDIT</button>
-                    <button class="action-btns" id="save">Save</button>
-                    <button class="action-btns close-btn">Close</button>
-                </div>
-
-            </section>
-            <section class="components-section">
-
-                <table class="table text-center">
-                    <thead>
-                        <tr>
-                            <th colspan="5">Appointment Table</th>
-                        </tr>
-                        <tr>
-                            <th>Appointment Id</th>
-                            <th>Appointment Title</th>
-                            <th colspan="2">Appointment Time</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-
-                    <tr>
-                        <td>101</td>
-                        <td>Regarding to Exam</td>
-                        <td>from : 18/04/2003</td>
-                        <td>to : 18/04/2003</td>
-                        <td class="tbl-action-col">
-                            <button class="tbl-edit-Btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                    width="24px" fill="green">
-                                    <path
-                                        d="M160-400v-80h280v80H160Zm0-160v-80h440v80H160Zm0-160v-80h440v80H160Zm360 560v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T863-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-                                </svg>
-                            </button>
-                            <button class="tbl-delete-Btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                    width="24px" fill="red">
-                                    <path
-                                        d="m376-300 104-104 104 104 56-56-104-104 104-104-56-56-104 104-104-104-56 56 104 104-104 104 56 56Zm-96 180q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520Zm-400 0v520-520Z" />
-                                </svg>
-                            </button>
-                        </td>
-                    </tr>
-
-                    <!-- <tr>
-                        <td>102</td>
-                        <td>Bhuvan</td>
-                        <td>BSC 3rd</td>
-                        <td>BSC 3rd</td>
-                        <td>BSC 3rd</td>
-                    </tr>
-
-                    <tr>
-                        <td>103</td>
-                        <td>Jayesh</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                    </tr>
-                    <tr>
-                        <td>103</td>
-                        <td>Jayesh</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                    </tr>
-                    <tr>
-                        <td>102</td>
-                        <td>Bhuvan</td>
-                        <td>BSC 3rd</td>
-                        <td>BSC 3rd</td>
-                        <td>BSC 3rd</td>
-                    </tr>
-
-                    <tr>
-                        <td>103</td>
-                        <td>Jayesh</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                    </tr>
-                    <tr>
-                        <td>103</td>
-                        <td>Jayesh</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                    </tr>
-                    <tr>
-                        <td>103</td>
-                        <td>Jayesh</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                    </tr>
-                    <tr>
-                        <td>102</td>
-                        <td>Bhuvan</td>
-                        <td>BSC 3rd</td>
-                        <td>BSC 3rd</td>
-                        <td>BSC 3rd</td>
-                    </tr>
-
-                    <tr>
-                        <td>103</td>
-                        <td>Jayesh</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                    </tr>
-                    <tr>
-                        <td>103</td>
-                        <td>Jayesh</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                    </tr>
-                    <tr>
-                        <td>103</td>
-                        <td>Jayesh</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                    </tr>
-                    <tr>
-                        <td>102</td>
-                        <td>Bhuvan</td>
-                        <td>BSC 3rd</td>
-                        <td>BSC 3rd</td>
-                        <td>BSC 3rd</td>
-                    </tr>
-
-                    <tr>
-                        <td>103</td>
-                        <td>Jayesh</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                    </tr>
-                    <tr>
-                        <td>103</td>
-                        <td>Jayesh</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                    </tr>
-                    <tr>
-                        <td>103</td>
-                        <td>Jayesh</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                    </tr>
-                    <tr>
-                        <td>102</td>
-                        <td>Bhuvan</td>
-                        <td>BSC 3rd</td>
-                        <td>BSC 3rd</td>
-                        <td>BSC 3rd</td>
-                    </tr>
-
-                    <tr>
-                        <td>103</td>
-                        <td>Jayesh</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                    </tr>
-                    <tr>
-                        <td>103</td>
-                        <td>Jayesh</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                    </tr>
-                    <tr>
-                        <td>103</td>
-                        <td>Jayesh</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                    </tr>
-                    <tr>
-                        <td>102</td>
-                        <td>Bhuvan</td>
-                        <td>BSC 3rd</td>
-                        <td>BSC 3rd</td>
-                        <td>BSC 3rd</td>
-                    </tr>
-
-                    <tr>
-                        <td>103</td>
-                        <td>Jayesh</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                    </tr>
-                    <tr>
-                        <td>103</td>
-                        <td>Jayesh</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                        <td>MCA 3rd</td>
-                    </tr> -->
-                </table>
-            </section>
         </main>
+
     </div>
     <!-- end user dashboard -->
 
 
+
+    <!-- end user dashboard -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- for sidebar functionality  -->
+    <script type="module" src="../public/modules/sidebar-toggle-module.js"></script>
+    <!-- insert data into profile section -->
+    <script type="module" src="./scripts/dashboard-script.js"></script>
+    <!-- <script type="module" src="./scripts/services/teacher-service.js"></script> -->
+
     <script>
-        const menuIcon = document.querySelector(".menu-Icon");
-        const closeIcon = document.querySelector(".close-Icon");
-
-        menuIcon.addEventListener("click", toggleMenu);
-        closeIcon.addEventListener("click", toggleMenu);
-
-        function toggleMenu() {
-
-            let menuDisplayProperty = window.getComputedStyle(menuIcon).display;
-            let closeDisplayProperty = window.getComputedStyle(closeIcon).display;
-
-            menuIcon.style.display = closeDisplayProperty;
-            closeIcon.style.display = menuDisplayProperty;
-            document.querySelector(".sidebar").style.display = menuDisplayProperty;
-        };
-
-        // script for edit btn toggle
-        const editBtn = document.querySelector(".edit-btn");
-        const closeBtn = document.querySelector(".close-btn");
-        const actionBtn = document.querySelectorAll(".action-btns");
-        const inputs = document.querySelectorAll("input");
-
-        editBtn.addEventListener("click", editBtnToggle);
-        closeBtn.addEventListener("click", editBtnToggle);
-
-        function editBtnToggle() {
-
-            if (window.getComputedStyle(editBtn).display == "none") {
-
-                editBtn.style.display = "block";
-                actionBtn[0].style.display = "none";
-                actionBtn[1].style.display = "none";
-
-                // make fields read-only
-                inputs[0].setAttribute("readonly", true);
-                inputs[1].setAttribute("readonly", true);
-                inputs[2].setAttribute("readonly", true);
-                inputs[3].setAttribute("readonly", true);
-
-            } else {
-
-                editBtn.style.display = "none";
-                actionBtn[0].style.display = "inline-block";
-                actionBtn[1].style.display = "inline-block";
-
-                // remove readonly attribute
-                inputs[0].removeAttribute("readonly");
-                inputs[1].removeAttribute("readonly");
-                inputs[2].removeAttribute("readonly");
-                inputs[3].removeAttribute("readonly");
-            }
-
-        }
 
 
-        document.querySelector("#save").addEventListener("click", () => {
 
-            let uName = inputs[0].value;
-            let Fname = inputs[1].value;
-            let contact = inputs[2].value;
-            let email = inputs[3].value;
-
-
-            console.groupCollapsed("Teacher data = ");
-            console.table({
-                "user name": uName,
-                "full name": Fname,
-                "contact": contact,
-                "email id": email
-            });
-            console.groupEnd();
-
-            editBtnToggle();
-        });
     </script>
 </body>
 

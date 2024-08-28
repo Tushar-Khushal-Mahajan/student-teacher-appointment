@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <link rel="stylesheet" href="student-home.css">
-    <link rel="stylesheet" href="../../static-resources/commons/nav-nd-sidebar.css">
+    <link rel="stylesheet" href="../static-resources/commons/nav-nd-sidebar.css">
     <title>Student Home</title>
 </head>
 
@@ -20,7 +20,7 @@
     <nav class="nav-bar">
         <ul class="left-nav-item container">
             <li>
-                <img class="logo" src="../static-resources/images/logo.jpg" alt="helo">
+                <!-- <img class="logo" src="../static-resources/images/logo.jpg" alt="helo"> -->
             </li>
 
             <li class="menu-Icon">
@@ -36,11 +36,6 @@
                         d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                 </svg>
             </li>
-
-            <!-- <li class="user-icon">
-                <img src="../static-resources/images/logo.jpg" alt="helo">
-                <span>Tushar Mahajan</span>
-            </li> -->
         </ul>
     </nav>
     <!-- end nav -->
@@ -50,29 +45,29 @@
     <section class="sidebar">
         <ul>
             <li></li>
-            <li class="user-Info">
-                <img src="../static-resources/images/logo.jpg" alt="">
-            </li>
-            <!-- <li>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                    fill="#000000">
-                    <path
-                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
-                </svg>
-            </li> -->
-            <li>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                    fill="#000000">
-                    <path
-                        d="M400-400h160v-80H400v80Zm0-120h320v-80H400v80Zm0-120h320v-80H400v80Zm-80 400q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" />
-                </svg>
+            <li class="user-Info active">
+                <a href="student-home.html">
+                    <img src="" class="adminProf"
+                        onerror="this.onerror=null; this.src='https://bootdey.com/img/Content/avatar/avatar7.png'">
+                </a>
             </li>
             <li>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                    fill="#000000">
-                    <path
-                        d="M200-200h360v-200h200v-360H200v560Zm0 80q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v400L600-120H200Zm80-280v-80h200v80H280Zm0-160v-80h400v80H280Zm-80 360v-560 560Z" />
-                </svg>
+                <a href="./layouts/see-all-appontments.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#000000">
+                        <path
+                            d="M400-400h160v-80H400v80Zm0-120h320v-80H400v80Zm0-120h320v-80H400v80Zm-80 400q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" />
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#000000">
+                        <path
+                            d="M200-200h360v-200h200v-360H200v560Zm0 80q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v400L600-120H200Zm80-280v-80h200v80H280Zm0-160v-80h400v80H280Zm-80 360v-560 560Z" />
+                    </svg>
+                </a>
             </li>
             <li class="log-out">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
@@ -90,37 +85,72 @@
 
 
 
-        <main class="top-main-container">
-            <section class="student-details-section">
+        <main class="top-main-container ">
+            <div class="container">
+                <div class="main-body">
 
-                <div class="top-section">
-                    <img src="../static-resources/images/20240625_115017-01.jpeg" alt="">
-                    <input type="text" value="Tushar" readonly>
-                    <label>STUDENT</label>
+                    <div class="row gutters-sm">
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex flex-column align-items-center text-center">
+                                        <img src="" alt="Admin" 
+                                            onerror="this.onerror=false; this.src='https://bootdey.com/img/Content/avatar/avatar7.png'"
+                                            class="rounded-circle adminProf" width="150">
+                                        <div class="mt-3">
+                                            <h4 class="NAME"></h4>
+                                            <p class="text-muted font-size-sm UID"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Full Name : </h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary NAME">
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Email : </h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary EMAIL">
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Mobile : </h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary MOBILE">
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <a class="btn btn-info " target="__blank"
+                                                href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div>
-                    <label for="name">Full Name : </label>
-                    <input type="text" id="name" value="Tushar Khushal Mahajan" readonly>
-                </div>
-
-                <div>
-                    <label for="email">Contact No : </label>
-                    <input type="number" id="number" name="mono" value="8637729558" maxlength="10" readonly>
-                </div>
-
-                <div>
-                    <label for="email">Email : </label>
-                    <input type="email" id="email" value="mahajantushar208@gmail.com" readonly>
-                </div>
-
-                <div class="buttons-group">
-                    <button class="edit-btn">EDIT</button>
-                    <button class="action-btns" id="save">Save</button>
-                    <button class="action-btns close-btn">Close</button>
-                </div>
-
-            </section>
         </main>
 
 
@@ -128,88 +158,10 @@
 
     <!-- end user dashboard -->
 
+    <script type="module" src="../public/modules/sidebar-toggle-module.js"></script>
+    <script type="module" src="./scripts/student-dashboard.js"></script>
     <script>
-        document.querySelectorAll("input[name='mono']").forEach(function (input) {
-            input.addEventListener('input', function (e) {
-                input.value = input.value.replace(/[^0-9]/g, '');
-            });
-        });
 
-        // toggle side-bar for small screens
-        const menuIcon = document.querySelector(".menu-Icon");
-        const closeIcon = document.querySelector(".close-Icon");
-
-        menuIcon.addEventListener("click", toggleMenu);
-        closeIcon.addEventListener("click", toggleMenu);
-
-        function toggleMenu() {
-
-            let menuDisplayProperty = window.getComputedStyle(menuIcon).display;
-            let closeDisplayProperty = window.getComputedStyle(closeIcon).display;
-
-            menuIcon.style.display = closeDisplayProperty;
-            closeIcon.style.display = menuDisplayProperty;
-            document.querySelector(".sidebar").style.display = menuDisplayProperty;
-        };
-
-        // script for edit btn toggle
-        const editBtn = document.querySelector(".edit-btn");
-        const closeBtn = document.querySelector(".close-btn");
-        const actionBtn = document.querySelectorAll(".action-btns");
-        const inputs = document.querySelectorAll("input");
-
-        editBtn.addEventListener("click", editBtnToggle);
-        closeBtn.addEventListener("click", editBtnToggle);
-
-        function editBtnToggle() {
-
-            if (window.getComputedStyle(editBtn).display == "none") {
-
-                editBtn.style.display = "block";
-                actionBtn[0].style.display = "none";
-                actionBtn[1].style.display = "none";
-
-                // make fields read-only
-                inputs[0].setAttribute("readonly", true);
-                inputs[1].setAttribute("readonly", true);
-                inputs[2].setAttribute("readonly", true);
-                inputs[3].setAttribute("readonly", true);
-
-            } else {
-
-                editBtn.style.display = "none";
-                actionBtn[0].style.display = "inline-block";
-                actionBtn[1].style.display = "inline-block";
-
-                // remove readonly attribute
-                inputs[0].removeAttribute("readonly");
-                inputs[1].removeAttribute("readonly");
-                inputs[2].removeAttribute("readonly");
-                inputs[3].removeAttribute("readonly");
-            }
-
-        }
-
-
-        document.querySelector("#save").addEventListener("click", () => {
-
-            let uName = inputs[0].value;
-            let Fname = inputs[1].value;
-            let contact = inputs[2].value;
-            let email = inputs[3].value;
-
-            if (confirm("are you really want to store the information")) {
-                console.groupCollapsed("Student data = ");
-                console.table({
-                    "user name": uName,
-                    "full name": Fname,
-                    "contact": contact,
-                    "email id": email
-                });
-                console.groupEnd();
-            }
-            editBtnToggle();
-        });
     </script>
 </body>
 

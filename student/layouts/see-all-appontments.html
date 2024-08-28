@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="../styles/see-all-appointments.css">
+    <link rel="stylesheet" href="../../static-resources/commons/nav-nd-sidebar.css">
+    <title>See all Appointments</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="nav-bar">
+        <ul class="left-nav-item container">
+            <li>
+                <!-- <img class="logo" src="../../static-resources/images/logo.jpg" alt="helo"> -->
+            </li>
+
+            <li class="menu-Icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#000000">
+                    <path d="M95-203v-95h771v95H95Zm0-230v-94h771v94H95Zm0-229v-95h771v95H95Z" />
+                </svg>
+            </li>
+            <li class="close-Icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#000000">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+            </li>
+        </ul>
+    </nav>
+    <!-- end nav -->
+
+    <!-- sidebar -->
+    <section class="sidebar">
+        <ul>
+            <li></li>
+            <li class="user-Info">
+                <a href="../student-home.html">
+                    <img src="" class="user_profile"
+                        onerror="this.onerror=null; this.src='https://bootdey.com/img/Content/avatar/avatar7.png'">
+                </a>
+            </li>
+            <li class="active">
+                <a href="see-all-appontments.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#000000">
+                        <path
+                            d="M400-400h160v-80H400v80Zm0-120h320v-80H400v80Zm0-120h320v-80H400v80Zm-80 400q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" />
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <a href="my-appointmtnes.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#000000">
+                            <path
+                                d="M200-200h360v-200h200v-360H200v560Zm0 80q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v400L600-120H200Zm80-280v-80h200v80H280Zm0-160v-80h400v80H280Zm-80 360v-560 560Z" />
+                        </svg>
+                    </a>
+                </a>
+            </li>
+            <li class="log-out">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#00000">
+                    <path
+                        d="M791-55 686-160H160v-112q0-34 17.5-62.5T224-378q45-23 91.5-37t94.5-21L55-791l57-57 736 736-57 57ZM240-240h366L486-360h-6q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm496-138q29 14 46 42.5t18 61.5L666-408q18 7 35.5 14t34.5 16ZM568-506l-59-59q23-9 37-29.5t14-45.5q0-33-23.5-56.5T480-720q-25 0-45.5 14T405-669l-59-59q23-34 58-53t76-19q66 0 113 47t47 113q0 41-19 76t-53 58Zm38 266H240h366ZM457-617Z" />
+                </svg>
+            </li>
+        </ul>
+    </section>
+    <!-- end sidebar -->
+
+    <main class="main-section ">
+        <h3 class="text-center">ALL Appointments</h3>
+        <section class="text-end">
+            <Label for="search-appointment">Search Appointment</Label>
+            <input type="text" id="search-appointment">
+        </section>
+
+        <!--  -->
+
+        <section class="mt-5 tbl-section">
+            <table class="table text-center apt-table">
+                <thead>
+                    <tr>
+                        <!-- <th>Teacher. Id</th>
+                        <th>Appt. Id</th> -->
+                        <th>Teacher Name</th>
+                        <th>Department</th>
+                        <th>Apt. Title</th>
+                        <th>Date</th>
+                        <th colspan="2">TIME</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+                <tbody id="TBL_BODY">
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!--  -->
+    <script type="module" src="../../public/modules/sidebar-toggle-module.js"></script>
+    <script type="module" src="../scripts/see-all-appointments.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

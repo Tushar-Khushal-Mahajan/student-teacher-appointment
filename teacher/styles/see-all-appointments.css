@@ -1,0 +1,71 @@
+.main-section {
+    position: relative;
+    top: 60px;
+    left: 50px;
+    padding: 5px;
+    width: calc(100% - 50px);
+    height: calc(100vh - 60px);
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.tbl-section {
+    width: 100%;
+    border: 1px solid black;
+    overflow: scroll;
+    height: max-content;
+    flex: 1;
+}
+
+.tbl-section .apt-table {
+    position: relative;
+    /* text-wrap: nowrap; */
+}
+
+.tbl-section .apt-table thead {
+    position: sticky;
+    top: 0px;
+
+    background: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.apt-table th,
+.apt-table td {
+    border: 1px solid rgba(0, 0, 0, 0.228);
+    text-wrap: nowrap;
+}
+
+.apt-table .tbl-action-btns {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.apt-table .tbl-action-btns button {
+    flex: 1;
+    border: none;
+    background-color: #fff;
+}
+
+.apt-table .tbl-action-btns button:hover {
+    box-shadow: 3px 3px 10px purple;
+}
+
+/* query for small screens */
+@media screen and (max-width:580px) {
+    .main-section {
+        padding: 10px !important;
+        /* margin: 0 !important; */
+        left: 0px;
+        width: 100%;
+    }
+
+    .apt-table th,
+    td {
+        text-wrap: nowrap;
+    }
+}
